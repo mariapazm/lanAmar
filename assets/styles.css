@@ -1,0 +1,283 @@
+body {
+    background-color: #f5faf0;
+    color: #141f0a;
+    font-family: lato;
+    font-size: 18px;
+    margin: 0;
+    padding: 0; 
+}
+
+.grid_container {
+    display: grid;
+}
+
+nav {
+    align-items: center;
+    /*background-color: #2f324c;*/
+    background-image: linear-gradient(to top, #a0cd65, #81a74f, #63823a, #475f26, #2c3e14);
+    color: #faf5f0;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    padding: 0.1em;   
+     }  
+
+.lista {
+    color: #faf5f0;
+    text-decoration: none;
+}
+
+.lista:hover {
+text-decoration: underline;
+}
+.menu {
+    align-items: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    list-style: none;
+    font-family: lato;
+     }
+
+.pestanas {
+    margin: 0.2em;
+     }   
+
+article {
+    align-items: center;
+    background-image: linear-gradient(to top, #a0cd65, #81a74f, #63823a, #475f26, #2c3e14);
+    color: #faf5f0;
+    display: flex; 
+    justify-content: space-between;
+    padding: 3em;
+    }
+
+header {
+    background-blend-mode: soft-light;
+    background-color: #5b5959;
+    background-image: url(img/tejido-gato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    padding: 8em 0;
+}
+    
+h1  {
+    font-family: lobster two;
+    font-size: 64px;
+    color: #faf5f0;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #faf5f0;
+    font-size: 52px;
+    font-family: lobster two;
+    font-style: italic;
+    font-size: 400;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+.tejidos {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3em; 
+}
+
+main h2 {
+    font-family: lobster two;
+    font-size: 52px;
+    color:#141f0a;
+}
+
+.producto {
+    width: 22em;
+    height: 16em;
+    object-fit: scale-down;
+    background-color: white;
+
+}
+
+figure {
+    width: 22em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1em;
+    border: #a0cd65 1px solid;
+    border-radius: 2%;
+    box-shadow: 5px 5px rgb(242, 241, 241);
+}
+
+figure:hover {
+    transform: translateY(3%);
+    border-color: #ffed65;
+}
+
+
+button {
+    background-color: #507B28;
+    color: #fff;
+    padding: 0.6em;
+    border-radius: 10%;
+    border-style: none;
+    width: 5.5em;
+    height: 3em;
+    transition: background-color 1s ease-out;  
+}
+
+button:hover {
+    background-color: #fffdeb;
+    color: #507B28;
+    border: solid 1px #507B28;
+}
+
+.item {
+    background-color: #fff;
+    color: #507B28;
+    border: #507B28 1px solid;
+    text-decoration: none;
+    padding: 0.8em;
+}
+
+.fa-brands {
+    margin: 0.2em;
+}
+
+.fa-solid {
+    margin-right: 0.5em;
+}
+
+footer {
+    background-color: #476b24;
+    color: #f5faf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0.8em;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: lobster two;
+    font-size: 42px;
+}
+
+footer h3 {
+    font-family: lobster two;
+    font-size: 32px;
+}
+
+.correo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto {
+    text-decoration: none;
+    color: #faf5f0;
+}
+
+.numero {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.telefono {
+    text-decoration: none;
+    color: #faf5f0;
+}
+
+li {
+    list-style: none;
+}
+
+
+@media (max-width: 768px) {
+    .grid_container {
+     grid-template-columns: 1fr;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .subtitulo {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+
+    }
+
+}
+    
+
+@media (min-width: 768px) {
+    .nav {
+        grid-area: nav;
+    }
+            
+    .article {
+        grid-area: article;
+         }
+            
+    .header {
+        grid-area: header;
+         }
+            
+    .main {
+        grid-area: main;
+         }
+            
+    .footer {
+        grid-area: footer;
+         }
+    
+    .grid_container {
+        grid-template-areas: 
+        "nav header header header"
+        "nav header header header"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer";
+    }
+
+    article {
+        display: none;
+    }
+
+    .menu {
+        font-size: 22px;
+        line-height: 200%;
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
